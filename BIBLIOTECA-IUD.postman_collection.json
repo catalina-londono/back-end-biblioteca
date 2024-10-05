@@ -1,0 +1,1191 @@
+{
+	"info": {
+		"_postman_id": "5a39572b-29fd-48a8-b7bd-a62081e90bbc",
+		"name": "BIBLIOTECA-IUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37986118"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "crearUsuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\" : \"400000\",\r\n    \"nombre\" : \"Miriam Hernandez\",\r\n    \"telefono\": \"311458445\",\r\n    \"direccion\" : \"Calle 32\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/usuarios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxMDAwMDAiLCJpYXQiOjE3Mjc0OTE5OTgsImV4cCI6MTcyNzU3ODM5OH0.Mui0WaeWDcAF9w9gof4qodzNfwiK10qJPXfj0-oxb6Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerPorID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxMDAwMDAiLCJpYXQiOjE3Mjc0OTE5OTgsImV4cCI6MTcyNzU3ODM5OH0.Mui0WaeWDcAF9w9gof4qodzNfwiK10qJPXfj0-oxb6Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/usuarios/66f2342e63cb1a581bf5d4bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"66f2342e63cb1a581bf5d4bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarUsuarioPorID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxMDAwMDAiLCJpYXQiOjE3Mjc0ODg1NDQsImV4cCI6MTcyNzU3NDk0NH0.ivuNzPmsWmVNsJkLbjomnjeHRAer_x8cK4lYzYtKoPA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Leidy Londoño\",\r\n    \"telefono\": \"311928445\",\r\n    \"direccion\" : \"Calle 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/usuarios/66f2342e63cb1a581bf5d4bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"66f2342e63cb1a581bf5d4bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deshabilitarporID",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxMDAwMDAiLCJpYXQiOjE3Mjc0ODg1NDQsImV4cCI6MTcyNzU3NDk0NH0.ivuNzPmsWmVNsJkLbjomnjeHRAer_x8cK4lYzYtKoPA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/usuarios/66f2342e63cb1a581bf5d4bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"66f2342e63cb1a581bf5d4bc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gestores",
+			"item": [
+				{
+					"name": "crearGestor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "secret",
+								"value": "be4e00246036a372f24415b8c247d647",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"documento\" : \"700000\",\r\n\"nombre\" : \"Leidy Londoño\",\r\n\"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/gestores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"gestores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"documento\" : \"700000\",\r\n    \"password\" : \"123456\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/gestores/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"gestores",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "prestamos",
+			"item": [
+				{
+					"name": "prestarEjemplar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ejemplar\": {\r\n        \"_id\" : \"67015d2e14fba6a2d9100a8c\"\r\n    },\r\n    \"usuario\": {\r\n        \"_id\" : \"6701631047b392f395ea1c26\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/prestamos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"prestamos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarTodos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3002/api/v1/prestamos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"prestamos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarPrestamosPorUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/prestamos/6701631047b392f395ea1c26/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"prestamos",
+								"6701631047b392f395ea1c26",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarPrestamosPorUYE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/prestamos/6701631047b392f395ea1c26/usuarios/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"prestamos",
+								"6701631047b392f395ea1c26",
+								"usuarios",
+								"true"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "localizaciones",
+			"item": [
+				{
+					"name": "consultarTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc3NDAyNzksImV4cCI6MTcyNzgyNjY3OX0.V04Ik2vaS3Di24_woW3zJEDmyu33RyQSFoG1pFgn3LU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/localizaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"localizaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearLocalizacion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc3NDA5NTMsImV4cCI6MTcyNzgyNzM1M30.XvmIHUGSfgGRb-t5UbfS8o15pcnRA8xec7pLNsKtWL4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seccion\" : 4,\r\n    \"estanteria\" : 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/localizaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"localizaciones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "autores",
+			"item": [
+				{
+					"name": "consultarAutores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc3NDA5NTMsImV4cCI6MTcyNzgyNzM1M30.XvmIHUGSfgGRb-t5UbfS8o15pcnRA8xec7pLNsKtWL4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearAutor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc3NDAyNzksImV4cCI6MTcyNzgyNjY3OX0.V04Ik2vaS3Di24_woW3zJEDmyu33RyQSFoG1pFgn3LU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\" : \"786768797\",\r\n    \"nombre\" : \"Franz Kafka\",\r\n    \"descripcion\" : \"Autor clásico de gran renombre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarAutorPorID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc3NDAyNzksImV4cCI6MTcyNzgyNjY3OX0.V04Ik2vaS3Di24_woW3zJEDmyu33RyQSFoG1pFgn3LU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/autores/66fb7f48836db6d6a458c96f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"66fb7f48836db6d6a458c96f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarAutorPorID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc3NDAyNzksImV4cCI6MTcyNzgyNjY3OX0.V04Ik2vaS3Di24_woW3zJEDmyu33RyQSFoG1pFgn3LU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\" : \"786768797\",\r\n    \"nombre\" : \"Franz Kafka\",\r\n    \"descripcion\" : \"Escritor clásico de gran renombre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/autores/66fb7f88836db6d6a458c977",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"66fb7f88836db6d6a458c977"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "editoriales",
+			"item": [
+				{
+					"name": "consultarEditoriales",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc4NDAyMTEsImV4cCI6MTcyNzkyNjYxMX0.qmspUOdW2bH_y9G9I69FIulqBLM90o3yPA96mETzNUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/editoriales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"editoriales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearEditorial",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc4NDAyMTEsImV4cCI6MTcyNzkyNjYxMX0.qmspUOdW2bH_y9G9I69FIulqBLM90o3yPA96mETzNUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Salamandra\",\r\n    \"descripcion\" : \"editorial salamandra\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/editoriales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"editoriales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarEditorialporID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc4NDAyMTEsImV4cCI6MTcyNzkyNjYxMX0.qmspUOdW2bH_y9G9I69FIulqBLM90o3yPA96mETzNUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/editoriales/66fcc0de025cfc3684b482e8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"editoriales",
+								"66fcc0de025cfc3684b482e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarPorID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc4NDAyMTEsImV4cCI6MTcyNzkyNjYxMX0.qmspUOdW2bH_y9G9I69FIulqBLM90o3yPA96mETzNUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Penguin Libros\",\r\n    \"descripcion\" : \"editorial penguin libros\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/editoriales/66fcc1d0025cfc3684b482fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"editoriales",
+								"66fcc1d0025cfc3684b482fc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "libros",
+			"item": [
+				{
+					"name": "crearLibro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc4NDAyMTEsImV4cCI6MTcyNzkyNjYxMX0.qmspUOdW2bH_y9G9I69FIulqBLM90o3yPA96mETzNUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\" : \"293943\",\r\n    \"titulo\" : \"Madame Bovary\" ,\r\n    \"ISBN\" : \"978-66\",\r\n    \"editorial\" : {\r\n        \"_id\" : \"66fcc1bb025cfc3684b482f6\"\r\n    },\r\n    \"autores\": [\r\n    {\r\n        \"_id\" : \"66fb7f48836db6d6a458c96f\"\r\n    }\r\n    ],\r\n    \"paginas\": 600\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/libros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarLibros",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc5OTU5NTAsImV4cCI6MTcyODA4MjM1MH0.EKkwpvwdhuH6jdBdvT_HoKfDwiSxYw0cXfVp2ODYCLA",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/libros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarLibroPorID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3Mjc5OTU5NTAsImV4cCI6MTcyODA4MjM1MH0.EKkwpvwdhuH6jdBdvT_HoKfDwiSxYw0cXfVp2ODYCLA",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/libros/66fcd246b0fea429f0fb414c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"libros",
+								"66fcd246b0fea429f0fb414c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarLibroPorID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"_id\": \"66fcd246b0fea429f0fb414c\",\r\n    \"codigo\": \"293943\",\r\n    \"titulo\": \"Madame Bovary\",\r\n    \"ISBN\": \"978-66\",\r\n    \"editorial\": {\r\n        \"_id\": \"66fcc1bb025cfc3684b482f6\",\r\n        \"nombre\": \"Debolsillo\"\r\n    },\r\n    \"paginas\": 700,\r\n    \"autores\": [\r\n        {\r\n            \"_id\": \"66fb7f48836db6d6a458c96f\",\r\n            \"nombre\": \"Gustave Flaubert\"\r\n        }\r\n    ],\r\n    \"fechaCreacion\": \"2024-10-02T04:50:23.724Z\",\r\n    \"__v\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/libros/66fcd246b0fea429f0fb414c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"libros",
+								"66fcd246b0fea429f0fb414c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ejemplares",
+			"item": [
+				{
+					"name": "crearEjemplar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"codigo\" : \"2000-0\",\r\n\"localizacion\": {\r\n\"_id\" : \"66fb750b062d52ef9de6500c\"\r\n},\r\n\"libro\" : {\r\n\"_id\": \"66fcd246b0fea429f0fb414c\"\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/ejemplares",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"ejemplares"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/ejemplares",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"ejemplares"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarEjemplarPorID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/ejemplares/67015d2e14fba6a2d9100a8c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"ejemplares",
+								"67015d2e14fba6a2d9100a8c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarEjemplarPorID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI3MDAwMDAiLCJpYXQiOjE3MjgxNDI0NTAsImV4cCI6MTcyODIyODg1MH0.7VDCV6fhUOB-QpqLtIrXx9v1tY8GaCfVIG24O0kqqoU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"codigo\" : \"2000-0\",\r\n\"localizacion\": {\r\n\"_id\" : \"66fb750b062d52ef9de6500c\"\r\n},\r\n\"libro\" : {\r\n\"_id\": \"66fcd246b0fea429f0fb414c\"\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/v1/ejemplares/67015d2e14fba6a2d9100a8c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"v1",
+								"ejemplares",
+								"67015d2e14fba6a2d9100a8c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
