@@ -191,7 +191,20 @@ const cobrarMulta = async (req = request, res = response) => {
 }
 const consultarPrestamos = async (req = request, res = response) => {
     try {
-        const prestamos = await Prestamo.find()
+        const prestamos = await Prestamo
+          .find()
+          .populate({
+            path: "ejemplar",
+            select: '_id codigo'
+          })
+          .populate({
+            path: "usuario",
+            select: '_id nombre'
+          })
+          .populate({
+            path: "gestor",
+            select: '_id nombre'
+          });
          return res.json(prestamos)
        } catch(e) {
           console.log(e)
@@ -199,16 +212,21 @@ const consultarPrestamos = async (req = request, res = response) => {
       }
   }
 
+  // TODO: CONSULTA PRESTAMOS PAGINADO
+
+
 const consultarPrestamosPorUsuario = async (req = request, res = response) => {
     try {
         const { id } = req.params
-        const usuarioBD = await Usuario.findById(id)
+        const usuarioBD = await 
+        Usuario.findById(id)
         if(!usuarioBD) {
          return res.status(400).json({
              msj: 'Usuario no existe'
          })
         }
-        const prestamos = await Prestamo.find({usuario: usuarioBD})
+        const prestamos = await Prestamo
+        .find({usuario: usuarioBD})
         return res.json(prestamos)
      } catch(e) {
          console.log(e)
